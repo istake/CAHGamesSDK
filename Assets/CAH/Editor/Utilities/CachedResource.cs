@@ -1,6 +1,12 @@
-﻿#if UNITY_EDITOR || UNITY_BUILD
+﻿
+
+#if UNITY_EDITOR
+
 using System.Collections.Generic;
-using UnityEngine; 
+using UnityEngine;
+
+namespace CAH.Editor.Utilities
+{
     public class CachedResource
     {
         public static Dictionary<string, Texture2D> cached = new Dictionary<string, Texture2D>();
@@ -19,5 +25,6 @@ using UnityEngine;
             }
         }
     }
+}
  
 #endif
