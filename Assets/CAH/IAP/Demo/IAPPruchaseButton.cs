@@ -35,7 +35,6 @@ public class IAPPruchaseButton : MonoBehaviour
         }
 
         //±¸¸Å
-        IAPManager.Instance.Purchase(proudctId);
-
+        IAPManager.Instance.Purchase(proudctId); 
     }
 }
