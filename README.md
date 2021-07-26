@@ -13,3 +13,4 @@
  - API 
  - GameSystem  
  - WebGL Plguin
+ - Deploy
