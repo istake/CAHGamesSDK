@@ -8,10 +8,13 @@
 
  
  - Socket.IO
- - InApp 
- - Firebase  
+ - Unity InApp Android, IOS ✔️ 
+ - Firebase Auth  
+ - Firebase Analytics 
+ - Firebase EventLog  
  - RESTful API Client 
  - API 
  - GameSystem  
+ - EditorUtility
  - WebGL Plguin
  - Deploy
