@@ -14,7 +14,7 @@
  - Firebase EventLog  
  - RESTful API Client 
  - API 
- - GameSystem  
+ - GameUtility
  - EditorUtility
  - WebGL Plguin
  - Deploy
