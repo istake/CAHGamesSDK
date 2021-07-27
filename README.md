@@ -25,18 +25,19 @@
  - Deploy
  
  # Details
- 
+  
  ## [IAP](/Assets/CAH/IAP)
   - Google Support ✔️  
   - Appstore Support ⚠️
  
-
- ## Firebase
+ 
+ ## [Firebase](/Assets/CAH/Firebase)
   - Auth ✔️ 
   - Analytics
-  - EventLog
+  - EventLog 
+  - 
 
- ## Auth
+ ## [Auth](/Assets/CAH/Auth)
  - Google✔️ 
  - Appstore 
 
