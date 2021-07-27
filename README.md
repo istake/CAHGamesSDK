@@ -15,18 +15,6 @@
 
  ⚠️ = Need Test
  ✔️ = Tested, Working Fine
-
-
- # Features
- 
- - Socket.IO
- - Unity InApp Android, IOS ✔️  
- - RESTful API Client 
- - API 
- - GameUtility
- - EditorUtility
- - WebGL Plguin
- - Deploy
  
  # Details
   
