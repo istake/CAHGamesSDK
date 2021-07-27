@@ -13,7 +13,7 @@
  기존 평소 필요하다고 느낀것들은 지속적으로 추가할 예정입니다.
  
 
- ⚠️ = Need Test
+ ⚠️ = Need Test  
  ✔️ = Tested, Working Fine
  
  # Details
@@ -26,9 +26,8 @@
  ## [Firebase](/Assets/CAH/Firebase)
   - Auth ✔️ 
   - Analytics
-  - EventLog 
-  - 
-
+  - EventLog  
+  
  ## [Auth](/Assets/CAH/Auth)
  - Google✔️ 
  - Appstore 
