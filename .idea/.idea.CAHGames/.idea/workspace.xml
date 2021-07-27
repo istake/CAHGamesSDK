@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af0fecb-b73e-4dc2-959a-520251949590" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
       <option value="$PROJECT_DIR$/Assets/CAH/Log/CAHLogger.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/API/README.md" />
       <option value="$PROJECT_DIR$/Assets/CAH/IAP/README.md" />
+      <option value="$PROJECT_DIR$/Assets/CAH/Editor/Utilities/EditorCallbacks.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vsF5BJHkEOuUR0akClfGdcKBUT" />
@@ -66,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627342707391</updated>
-      <workItem from="1627342713231" duration="2450000" />
+      <workItem from="1627342713231" duration="3115000" />
     </task>
     <servers />
   </component>
