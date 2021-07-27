@@ -26,14 +26,14 @@ namespace CAH.Auth.Mobile
                 if (webClientId.text.Length <= 1)
                     throw new Exception("Resources GoogleAuthService/WebClientId.txt Is Invalid");
                 var idMap = UnityEngine.JsonUtility.FromJson<GoogleAuthWebClientInfo>(webClientId.text);
-                this.Log("Loaded Webclient id => " + idMap);
+                this.Log("Loaded Webclient id => " + idMap.WebClientId);
                 
                 #if UNITY_ANDROID && !UNITY_EDITOR
                 Google.GoogleSignIn.Configuration = new GoogleSignInConfiguration()
                 {
                     RequestIdToken = true,
                     RequestEmail = true,
-                    WebClientId = idMap
+                    WebClientId = idMap.WebClientId
                 };
                 _sign = GoogleSignIn.DefaultInstance;
                 #endif
@@ -58,6 +58,11 @@ namespace CAH.Auth.Mobile
                 if (task.IsCompleted)
                 {
                     this.Log("로그인 성공");
+                    GoogleSignInUser signInUser = task.Result;
+                    
+                    this.Log(signInUser.Email);
+                    this.Log(signInUser.IdToken);
+                    this.Log(signInUser.UserId);  
                 } 
             });
         }

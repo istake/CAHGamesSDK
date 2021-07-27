@@ -2,32 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af0fecb-b73e-4dc2-959a-520251949590" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/IAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/IAuthService.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/AppStore.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AppStore.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/AppStore/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AppStore/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/AppStore/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AppStore/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Email.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Email.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Email/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Email/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Email/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Email/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Facebook.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Facebook.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Facebook/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Facebook/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Facebook/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Facebook/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Google.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Google/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Line/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Google/README.md.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Line.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Line.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Line/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/MCommon/Line/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Line/README.md.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/Log/CAHLogger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Log/CAHLogger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-common-20.0.0.aar" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/com.google.firebase.firebase-common-20.0.0.aar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/dd.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dd.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +13,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
@@ -48,11 +33,11 @@
       <option value="$PROJECT_DIR$/Assets/CAH/IAP/README.md" />
       <option value="$PROJECT_DIR$/Assets/CAH/Editor/Utilities/EditorCallbacks.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/Google/GoogleAuthService.cs" />
-      <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/Log/CAHLogger.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/IAuthService.cs" />
       <option value="$PROJECT_DIR$/Assets/Test.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/AuthManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vsF5BJHkEOuUR0akClfGdcKBUT" />
@@ -99,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627342707391</updated>
-      <workItem from="1627342713231" duration="7077000" />
+      <workItem from="1627342713231" duration="7555000" />
     </task>
     <servers />
   </component>
