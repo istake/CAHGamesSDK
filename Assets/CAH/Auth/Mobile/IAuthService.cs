@@ -4,7 +4,7 @@ namespace CAH.Auth.Mobile
 {
     public interface IAuthService
     {
-        bool IsInintialize { get; }
+        bool IsInitialize { get; }
         /// <summary>
         /// 초기화
         /// </summary>

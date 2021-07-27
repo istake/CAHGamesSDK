@@ -49,10 +49,10 @@ namespace CAH.IAP.Unity
 
     public class Store
     {
-        public IExtensionProvider storeExtnetionProvider;
-        public IStoreController storeController;
-        public List<LocalProduct> localProducts = new List<LocalProduct>();
-        public ProductCollection receivedProducts;
+        public IExtensionProvider StoreExtenstionProvider;
+        public IStoreController StoreController;
+        public List<LocalProduct> LocalProducts = new List<LocalProduct>();
+        public ProductCollection ReceivedProducts;
 
 
     }
@@ -77,26 +77,26 @@ namespace CAH.IAP.Unity
         /// </summary>
         public Store Store = new Store();
 
-
+        
         /// <summary>
         /// Unity IAP 구매 과정을 제어
         /// </summary>
-        private IStoreController storeController;
+        private IStoreController _storeController;
         /// <summary>
         /// Unity IAP 다른 플랫폼 추가용 확장인터페이스
         /// </summary>
-        private IExtensionProvider storeExtnetionProvider;   
+        private IExtensionProvider _storeExtenstionProvider;   
         /// <summary>
         /// 초기화여부
         /// </summary>
         /// 
 
-        public bool IsInitialized => storeController != null && storeExtnetionProvider != null;
+        public bool IsInitialized => _storeController != null && _storeExtenstionProvider != null;
 
 
-        public void GetStore()
+        public Store GetStore()
         {
-
+            return Store;
         }
         void Awake()
         {
@@ -105,7 +105,7 @@ namespace CAH.IAP.Unity
             DontDestroyOnLoad(gameObject);
 
             Store = new Store();
-            Store.localProducts.Add(new LocalProduct()
+            Store.LocalProducts.Add(new LocalProduct()
             {
                 AndroidProudctId = "diamond100",
                 ProductName = "diamond",
@@ -125,7 +125,7 @@ namespace CAH.IAP.Unity
             //인앱 관련 설정 빌더생성
             //StandardPurchasingModule = 스토어 기본설정
             var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
-            foreach (var product in Store.localProducts)
+            foreach (var product in Store.LocalProducts)
             {
                 builder.AddProduct(product.ProductName, product.ProductType, new IDs(){
                     { product.IOSProductId, AppleAppStore.Name },
@@ -143,13 +143,16 @@ namespace CAH.IAP.Unity
         /// <param name="extensions"></param>
         public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
         {
-            this.storeController = controller;
-            this.storeExtnetionProvider = extensions;
+            this._storeController = controller;
+            this._storeExtenstionProvider = extensions;
 
-            this.Store.storeController = controller;
-            this.Store.storeExtnetionProvider = extensions;
-            this.Store.receivedProducts = controller.products;
-            this.Log("유니티 IAP 초기화됨!");  
+            this.Store.StoreController = controller;
+            this.Store.StoreExtenstionProvider = extensions;
+            this.Store.ReceivedProducts = controller.products;
+            this.Log("유니티 IAP 초기화됨!");   
+             
+
+
         }
 
         /// <summary>
@@ -199,11 +202,11 @@ namespace CAH.IAP.Unity
         {
             if (!IsInitialized) return;
 
-            var product = storeController.products.WithID(id);
+            var product = _storeController.products.WithID(id);
             if(product != null)
             {
                 Debug.Log("구매 시도 - " + product.definition.id);
-                storeController.InitiatePurchase(product);
+                _storeController.InitiatePurchase(product);
             }
             else
             {
@@ -223,8 +226,8 @@ namespace CAH.IAP.Unity
             if (platform == RuntimePlatform.IPhonePlayer ||
                 platform == RuntimePlatform.OSXPlayer)
             {
-                var extention = storeExtnetionProvider.GetExtension<IAppleExtensions>();
-                extention.RestoreTransactions((success) => {
+                var extenstion = _storeExtenstionProvider.GetExtension<IAppleExtensions>();
+                extenstion.RestoreTransactions((success) => {
                     if (success == false)
                     {
                         Debug.Log($"구매 복구 시도 실패");
@@ -238,8 +241,8 @@ namespace CAH.IAP.Unity
 
             if (platform == RuntimePlatform.Android)
             {
-                var extention = storeExtnetionProvider.GetExtension<IGooglePlayStoreExtensions>();
-                extention.RestoreTransactions((success) => {
+                var extenstion = _storeExtenstionProvider.GetExtension<IGooglePlayStoreExtensions>();
+                extenstion.RestoreTransactions((success) => {
                     if (success == false)
                     {
                         Debug.Log($"구매 복구 시도 실패");
@@ -261,7 +264,7 @@ namespace CAH.IAP.Unity
         public bool HadPurchase(string productId)
         {
             if (!IsInitialized) return false;
-            var product = storeController.products.WithID(productId);
+            var product = _storeController.products.WithID(productId);
 
             if (product != null)
                 return product.hasReceipt;

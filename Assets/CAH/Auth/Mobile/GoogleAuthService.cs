@@ -6,19 +6,14 @@ using UnityEngine;
 
 namespace CAH.Auth.Mobile
 {
-    
-    class GoogleAuthWebClientInfo
-    {
-        public string WebClientId;
-    }
     public class GoogleAuthService : IAuthService
     {
-        public bool IsInintialize => _sign != null;
+        public bool IsInitialize => _sign != null;
 
         private GoogleSignIn _sign;
         public void Initialize()
         {
-            if (!IsInintialize)
+            if (!IsInitialize)
             {
                 var webClientId = Resources.Load<TextAsset>("GoogleAuthService/WebClientId");
                 if (webClientId == null)
@@ -26,7 +21,7 @@ namespace CAH.Auth.Mobile
                 if (webClientId.text.Length <= 1)
                     throw new Exception("Resources GoogleAuthService/WebClientId.txt Is Invalid");
                 var idMap = UnityEngine.JsonUtility.FromJson<GoogleAuthWebClientInfo>(webClientId.text);
-                this.Log("Loaded Webclient id => " + idMap.WebClientId);
+                this.Log("Loaded Web-client id => " + idMap.WebClientId);
                 
                 #if UNITY_ANDROID && !UNITY_EDITOR
                 Google.GoogleSignIn.Configuration = new GoogleSignInConfiguration()
@@ -42,7 +37,7 @@ namespace CAH.Auth.Mobile
         public void SignIn(System.Action<object> result)
         {
             Initialize();
-            if (IsInintialize == false) return;
+            if (IsInitialize == false) return;
             _sign.SignIn().ContinueWith(task =>
             {
                 if (task.IsCanceled)
@@ -69,7 +64,7 @@ namespace CAH.Auth.Mobile
 
         public void SignOut(System.Action<object> result)
         {            
-            if (IsInintialize == false) return;
+            if (IsInitialize == false) return;
             _sign.SignOut(); 
             result?.Invoke(true);
         }

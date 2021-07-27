@@ -19,7 +19,7 @@ public class IAPPruchaseButton : MonoBehaviour
     }
     public void OnClick()
     {
-        var product = IAPManager.Instance.Store?.localProducts.Any(x => x.PlatformProductId == this.proudctId);
+        var product = IAPManager.Instance.Store?.LocalProducts.Any(x => x.PlatformProductId == this.proudctId);
         if (product != null)
         { 
             if (IAPManager.Instance.HadPurchase(proudctId))
