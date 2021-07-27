@@ -26,7 +26,7 @@
  
  # Details
  
- ## IAP
+ ## [IAP](/Assets/CAH/IAP)
   - Google Support ✔️  
   - Appstore Support ⚠️
  
