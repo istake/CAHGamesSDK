@@ -47,14 +47,17 @@ namespace CAH.IAP.Unity
         }
     }
 
+    [System.Serializable]
     public class Store
     {
         public IExtensionProvider StoreExtenstionProvider;
         public IStoreController StoreController;
+
+        /// <summary>
+        /// 여기에 스토어에 있는 상품들을 넣어야합니다.
+        /// </summary>
         public List<LocalProduct> LocalProducts = new List<LocalProduct>();
-        public ProductCollection ReceivedProducts;
-
-
+        public ProductCollection ReceivedProducts; 
     }
     public class IAPManager : MonoBehaviour, IStoreListener
     {
@@ -108,7 +111,7 @@ namespace CAH.IAP.Unity
             Store.LocalProducts.Add(new LocalProduct()
             {
                 AndroidProudctId = "diamond100",
-                ProductName = "diamond",
+                ProductName = "diamond100",
                 IOSProductId = "diamond100",
                 ProductType = ProductType.Consumable
             });
@@ -125,13 +128,20 @@ namespace CAH.IAP.Unity
             //인앱 관련 설정 빌더생성
             //StandardPurchasingModule = 스토어 기본설정
             var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
+
+
+
             foreach (var product in Store.LocalProducts)
             {
                 builder.AddProduct(product.ProductName, product.ProductType, new IDs(){
                     { product.IOSProductId, AppleAppStore.Name },
                     { product.AndroidProudctId, GooglePlay.Name },
                 });
+
+                this.Log("상품 정보 갱신 " + product.AndroidProudctId);
             }
+
+ 
             UnityPurchasing.Initialize(this, builder);
         }
 
@@ -149,8 +159,20 @@ namespace CAH.IAP.Unity
             this.Store.StoreController = controller;
             this.Store.StoreExtenstionProvider = extensions;
             this.Store.ReceivedProducts = controller.products;
-            this.Log("유니티 IAP 초기화됨!");   
-             
+           
+            this.Log("유니티 IAP 초기화됨!");
+
+            this.Log("스토어 상품 읽어오는중..");
+
+            foreach (var product in Store.StoreController.products.all)
+            {
+                this.Log("스토어 상품 받아옴 => " + product.definition.id);
+            }
+            this.Log("로컬 상품 읽어오는중..");
+            foreach (var product in Store.LocalProducts)
+            {
+                this.Log("로컬 상품 받아옴 => " + product.PlatformProductId);
+            }
 
 
         }
@@ -213,7 +235,7 @@ namespace CAH.IAP.Unity
                 Debug.Log($"구매 시도 실패, product가 null입니다. 시도한 상품 id=> {id}");
             }
         }
-
+        public bool Purchase(LocalProduct product) => HadPurchase(product.PlatformProductId);
         /// <summary>
         /// 자동 복구 (구매를 했는데 보상을 못받은경우 호출)
         /// </summary>
@@ -257,7 +279,7 @@ namespace CAH.IAP.Unity
 
 
         /// <summary>
-        /// 스토어에 프로덕트 id가 있는지 확인
+        /// 구매한 상품인지 확인
         /// </summary>
         /// <param name="productId"></param>
         /// <returns></returns>
@@ -271,6 +293,8 @@ namespace CAH.IAP.Unity
 
             return false;
         }
+
+        public bool HadPurchase(LocalProduct product) => HadPurchase(product.PlatformProductId);
     }
 
 }

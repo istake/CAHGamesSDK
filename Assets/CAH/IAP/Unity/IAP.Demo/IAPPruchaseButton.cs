@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
 public class IAPPruchaseButton : MonoBehaviour
@@ -19,8 +20,10 @@ public class IAPPruchaseButton : MonoBehaviour
     }
     public void OnClick()
     {
-        var product = IAPManager.Instance.Store?.LocalProducts.Any(x => x.PlatformProductId == this.proudctId);
-        if (product != null)
+        var product = IAPManager.Instance.Store.LocalProducts.Find(x => x.PlatformProductId == this.proudctId);
+
+        // 상품 타입이 소모형이 아닌경우
+        if (product != null && product.ProductType != ProductType.Consumable)
         { 
             if (IAPManager.Instance.HadPurchase(proudctId))
             {
@@ -28,7 +31,7 @@ public class IAPPruchaseButton : MonoBehaviour
                 return;
             } 
         }
-        else
+        else if(product == null)
         {
             Debug.LogError($"상품이 없습니다!! {proudctId}");
             return;
