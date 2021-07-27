@@ -11,4 +11,12 @@ public static class CAHLogger
     {
         Debug.Log(mine.GetType().Name + " :: " + message);
     }
+    public static void Log(this object mine, object message)
+    {
+        Debug.Log(mine.GetType().Name + " :: " + message);
+    }
+    public static void Error(this object mine, object message)
+    {
+        Debug.LogError(mine.GetType().Name + " :: " + message);
+    } 
 }
