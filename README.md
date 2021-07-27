@@ -39,3 +39,9 @@ qqqq# CAHGames
  ## Auth
  - Google✔️ 
  - Appstore 
+
+
+
+ ### Memo
+ 
+  - Plugins들은 최대한 Assets/ 에 위치해야 Resolver 관련 문제가 생기지 않음 
