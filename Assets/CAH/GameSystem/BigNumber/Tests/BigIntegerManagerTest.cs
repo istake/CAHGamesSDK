@@ -11,15 +11,9 @@ public class BigIntegerManagerTest : MonoBehaviour
     #if ODIN_INSPECTOR
     public BigInteger TestNumber;
     [Button("Test")]
-    public void Test(int value)
-    { 
-        BigInteger a = BigInteger.Parse("10000000000000000000000000000000000000000000000000000000000000000000000000000");
-        for (int i = 0; i < value; i++)
-        {
-            BigIntegerManager.GetUnit(a);
-        }
-
-        Debug.Log(BigIntegerManager.GetUnit(a));
+    public void Test(string value)
+    {  
+        Debug.Log(BigIntegerManager.UnitToValue(value));
     }
     #endif
 }

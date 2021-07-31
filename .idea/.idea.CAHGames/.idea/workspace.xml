@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4af0fecb-b73e-4dc2-959a-520251949590" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CAHGames/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Demo/IAP.Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Demo/IAP.Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Demo/IAPPruchaseButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Demo/IAPPruchaseButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Unity/IAPManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CAH/IAP/Unity/IAPManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Runtime/BigIntegerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Runtime/BigIntegerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Tests/BigIntegerManagerTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Tests/BigIntegerManagerTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,16 +26,21 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CFC1AD89-0650-411E-946C-FF2E6F276711/00/8f528cf0/Mathf.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0DE08E20-0047-4B34-9ADB-AF57E189002D/7b/f4f58adc/VersionHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.1.0/Unity.Mathematics/Noise/cellular2x2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.27/UnityEditor.TestRunner/UnityTestProtocol/TestPlanMessage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS.Examples/3. GameBalanceEditor(Live Save)/EditableItemModel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@3.2.2/Runtime/Purchasing/InitializationFailureReason.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS/Editor/Modules/Core/EnumGeneratorGUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS/Editor/Modules/Core/EnumGeneratorGUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CAH/Editor/Utilities/EditorPrefsManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.11/Editor/UsageUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CAH/Editor/Utilities/DefineSymbolManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Tests/BigIntegerManagerTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS/Runtime/Core/Exception/TypeParserNotFoundException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS/Runtime/Core/Exception/RequireTypeAttributeException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.test-framework@1.1.27/UnityEditor.TestRunner/UnityTestProtocol/TestPlanMessage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS.Examples/3. GameBalanceEditor(Live Save)/EditableItemModel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.purchasing@3.2.2/Runtime/Purchasing/InitializationFailureReason.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../OneDrive/Documents/GitHub/UnityGoogleSheet/UGS_Project/Assets/UGS/Runtime/Core/Reflection/TableUtils.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C06ABE64-8A73-4F4B-BE3F-720F45423A3E/ec/d686c845/PlayServicesResolver.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -55,6 +56,12 @@
       <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthService.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/IAP/Unity/IAPManager.cs" />
       <option value="$PROJECT_DIR$/Assets/CAH/Auth/Mobile/GoogleAuthWebClientInfo.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/IAP/Unity/Runtime/IAPManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/GameSystem/Resolution/CameraLetterBox.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/BigIntegerManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Runtime/BigIntegerExtention.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Tests/BigIntegerManagerTest.cs" />
+      <option value="$PROJECT_DIR$/Assets/CAH/GameSystem/BigNumber/Runtime/BigIntegerManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1vsF5BJHkEOuUR0akClfGdcKBUT" />
@@ -103,6 +110,9 @@
       <updated>1627342707391</updated>
       <workItem from="1627342713231" duration="9273000" />
       <workItem from="1627379782562" duration="2905000" />
+      <workItem from="1627392725797" duration="755000" />
+      <workItem from="1627411982638" duration="1616000" />
+      <workItem from="1627713154202" duration="8146000" />
     </task>
     <servers />
   </component>
