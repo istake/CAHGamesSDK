@@ -51,7 +51,7 @@ namespace CAH.GameSystem.BigNumber
                         unit = $"{fAscii}{tAscii}"; 
                     }  
                     _units.Add(unit); 
-                    _unitsMap.Add(unit, BigInteger.Pow(_unitSize, _units.Count)); 
+                    _unitsMap.Add(unit, BigInteger.Pow(_unitSize, _units.Count-1)); 
                     _idxMap.Add(unit, _units.Count-1);
                 }
             }    
@@ -114,12 +114,11 @@ namespace CAH.GameSystem.BigNumber
         {       
             if (isInitialize == false) 
                 UnitInitialize(5);
+            
+            var split = unit.Split('.');
             //소수점에 관한 연산 들어감
-            if (unit.Contains("."))
-            {
-                //스플릿
-                var split = unit.Split('.');
-
+            if (split.Length >= 2)
+            { 
                 var value = BigInteger.Parse(split[0]); 
                 var point = BigInteger.Parse((Regex.Replace(split[1], "[^0-9]", "")));
                 var unitStr = Regex.Replace(split[1], "[^A-Z]", "");
@@ -138,9 +137,7 @@ namespace CAH.GameSystem.BigNumber
                 var value = BigInteger.Parse((Regex.Replace(unit, "[^0-9]", ""))); 
                 var unitStr = Regex.Replace(unit, "[^A-Z]", ""); 
                 while (_unitsMap.ContainsKey(unitStr) == false) 
-                    UnitInitialize(5);
-
-
+                    UnitInitialize(5); 
                 var result = _unitsMap[unitStr] * value;
 
                 if (result == 0) 
