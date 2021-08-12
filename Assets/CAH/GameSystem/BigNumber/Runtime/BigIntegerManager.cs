@@ -44,11 +44,11 @@ namespace CAH.GameSystem.BigNumber
                         unit = ((char) i).ToString();
                     else
                     {
-                        var nCount = (float)n / 26; 
-                        var nextChar = _asciiA + n - 1;  
-                        var fAscii = (char) nextChar;
-                        var tAscii = (char) i;
-                        unit = $"{fAscii}{tAscii}"; 
+                        var nCount = (float)n / 26;  
+                        var nextChar = _asciiA + n - 1;   
+                        var firstAscii = (char) nextChar;
+                        var secondAscii = (char) i;
+                        unit = $"{firstAscii}{secondAscii}"; 
                     }  
                     _units.Add(unit); 
                     _unitsMap.Add(unit, BigInteger.Pow(_unitSize, _units.Count-1)); 
@@ -122,7 +122,8 @@ namespace CAH.GameSystem.BigNumber
                 var value = BigInteger.Parse(split[0]); 
                 var point = BigInteger.Parse((Regex.Replace(split[1], "[^0-9]", "")));
                 var unitStr = Regex.Replace(split[1], "[^A-Z]", "");
-
+                while (_unitsMap.ContainsKey(unitStr) == false) 
+                    UnitInitialize(5); 
                 if (point == 0) return (_unitsMap[unitStr] * value);
                 else
                 {

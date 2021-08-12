@@ -110,15 +110,39 @@ namespace CAH.IAP.Unity
             Store = new Store();
             Store.LocalProducts.Add(new LocalProduct()
             {
-                AndroidProudctId = "diamond100",
-                ProductName = "diamond100",
-                IOSProductId = "diamond100",
+                AndroidProudctId = "consume",
+                ProductName = "consume",
+                IOSProductId = "consume",
                 ProductType = ProductType.Consumable
+            });
+            Store.LocalProducts.Add(new LocalProduct()
+            {
+                AndroidProudctId = "nonconsume",
+                ProductName = "nonconsume",
+                IOSProductId = "nonconsume",
+                ProductType = ProductType.NonConsumable
+            });
+            Store.LocalProducts.Add(new LocalProduct()
+            {
+                AndroidProudctId = "subscribe",
+                ProductName = "subscribe",
+                IOSProductId = "subscribe",
+                ProductType = ProductType.Subscription
             });
 
             InitUnityIAP(); 
         }
-         
+
+
+        public string GetLocalizedPrice(string id)
+        {
+            return GetProductById(id).metadata.localizedPriceString;
+        }
+
+        public string GetLocalizedTitle(string id)
+        {
+            return GetProductById(id).metadata.localizedTitle;
+        }
 
         /// <summary>
         /// IAP가 초기화되면 호출됩니다
@@ -212,9 +236,14 @@ namespace CAH.IAP.Unity
 
 
             return PurchaseProcessingResult.Complete;
-        } 
+        }
 
 
+        public Product GetProductById (string id)
+        {
+            var product = _storeController.products.WithID(id);
+            return product;
+        }
 
         /// <summary>
         /// 구매 시도
@@ -224,7 +253,7 @@ namespace CAH.IAP.Unity
         {
             if (!IsInitialized) return;
 
-            var product = _storeController.products.WithID(id);
+            var product = GetProductById(id);
             if(product != null)
             {
                 Debug.Log("구매 시도 - " + product.definition.id);

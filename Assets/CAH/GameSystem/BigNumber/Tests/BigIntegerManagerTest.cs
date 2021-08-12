@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
@@ -15,5 +16,11 @@ public class BigIntegerManagerTest : MonoBehaviour
     {  
         Debug.Log(BigIntegerManager.UnitToValue(value));
     }
-    #endif
+
+    public int Power;
+    public void Update()
+    {
+        Debug.Log(BigIntegerManager.GetUnit(BigInteger.Pow(1000, Power)));
+    }
+#endif
 }
