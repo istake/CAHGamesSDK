@@ -9,14 +9,20 @@ public static class CAHLoggerExtend
 {
     public static void Log(this object mine, string message)
     {
+#if CAH_LOGGER_DISABLED
         Debug.Log(mine.GetType().Name + " :: " + message);
+#endif
     }
     public static void Log(this object mine, object message)
     {
+#if CAH_LOGGER_DISABLED
         Debug.Log(mine.GetType().Name + " :: " + message);
+#endif
     }
     public static void Error(this object mine, object message)
     {
+#if CAH_LOGGER_DISABLED
         Debug.LogError(mine.GetType().Name + " :: " + message);
+#endif
     } 
 }
