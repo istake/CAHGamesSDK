@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public static class CAHLoggerExtend
+public static class CAHLoggerExtention
 {
     public static void Log(this object mine, string message)
     {
